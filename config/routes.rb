@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  root 'main#index'
+  # changed from 'main#index' to 'main#home'
+  root 'main#home'
 
 end
