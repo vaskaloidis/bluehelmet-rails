@@ -412,13 +412,16 @@
 					<!-- Wrapper for slides -->
 					<div class="carousel-inner" role="listbox">
 						<div class="item active">
-							<img src="images/placeholder.png" alt="..." class="img-responsive">
+							<!-- <img src="app/assets/images/placeholder.png" alt="..." class="img-responsive"> -->
+							<%= image_tag("placeholder.png", class: "img-responsive") %>
 						</div>
 						<div class="item">
-							<img src="images/placeholder2.png" alt="..." class="img-responsive">
+							<!-- <img src="app/assets/images/placeholder2.png" alt="..." class="img-responsive"> -->
+							<%= image_tag("placeholder2.png", class: "img-responsive") %>
 						</div>
 						<div class="item">
-							<img src="images/placeholder3.png" alt="..." class="img-responsive">
+							<!-- <img src="app/assets/images/placeholder3.png" alt="..." class="img-responsive"> -->
+							<%= image_tag("placeholder3.png", class: "img-responsive") %>
 						</div>
 					</div>
 				</div>
@@ -429,7 +432,7 @@
 <!-- End About -->
 
 <!-- Begin Our Count -->
-<section id="ourcount" class="section-padding parallax-window" data-parallax="scroll" data-image-src="images/slider1.jpg">
+<section id="ourcount" class="section-padding parallax-window" data-parallax="scroll" data-image-src="<%= image_url('slider1.jpg') %>">
 	<div class="container">
 		<div class="row mb30">
 			<div class="section-title col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3 text-center">
@@ -483,7 +486,8 @@
 		</div><!-- /.row -->
 		<div class="row">
 			<div class="col-sm-4">
-				<img alt="" src="images/team-member-1.jpg" class="img-responsive">
+				<!-- <img alt="" src="app/assets/images/team-member-1.jpg" class="img-responsive"> -->
+				<%= image_tag("team-member-1.jpg", class: "img-responsive") %>
 				<div class="profile-box">
 					<ul class="list-unstyled">
 						<li><strong>Name:</strong> Denis Samardjiev</li>
@@ -556,14 +560,17 @@
 		<div id="thework">
 			<!-- Item 1 -->
 			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 portfolio-box no-padding mix graphics" data-my-order="3">
-				<div class="portfolio-image-holder"><img src="images/work/1.jpg" alt="1" class="img-responsive portfolio-image"></div>
+				<div class="portfolio-image-holder">
+					<!-- <img src="app/assets/images/work/1.jpg" alt="1" class="img-responsive portfolio-image"> -->
+					<%= image_tag("work/1.jpg", class: "img-responsive portfolio-image") %>
+				</div>
 				<span class="portfolio-badge badge">Graphics</span>
 				<span class="portfolio-hover">
 						<span>
 							<a href="https://dribbble.com/" target="_blank">
 								<span class="portfolio-links"><span class="ion-ios-arrow-right portfolio-links-icons"></span></span>
 							</a>
-							<a href="images/work/1.jpg" class="zoom" title="Equipt Design">
+							<a href="<%= image_url('work/1.jpg') %>" class="zoom" title="Equipt Design">
 								<span class="portfolio-links"><span class="ion-arrow-expand portfolio-links-icons"></span></span>
 							</a>
 							<span class="project-title no-margin-bottom mt10">Equipt Design</span>
@@ -573,14 +580,17 @@
 			
 			<!-- Item 2 -->
 			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 portfolio-box no-padding mix print identity" data-my-order="6">
-				<div class="portfolio-image-holder"><img src="images/work/2.jpg" alt="2" class="img-responsive portfolio-image"></div>
+				<div class="portfolio-image-holder">
+					<!-- <img src="app/assets/images/work/2.jpg" alt="2" class="img-responsive portfolio-image"> -->
+					<%= image_tag("work/2.jpg", class: "img-responsive portfolio-image") %>
+				</div>
 				<span class="portfolio-badge badge">Print + Identity</span>
 				<span class="portfolio-hover">
 						<span>
 							<a href="https://dribbble.com/" target="_blank">
 								<span class="portfolio-links"><span class="ion-ios-arrow-right portfolio-links-icons"></span></span>
 							</a>
-							<a href="images/work/2.jpg" class="zoom" title="Goodman's Burger">
+							<a href="<%= image_url('work/2.jpg') %>" class="zoom" title="Goodman's Burger">
 								<span class="portfolio-links"><span class="ion-arrow-expand portfolio-links-icons"></span></span>
 							</a>
 							<span class="project-title no-margin-bottom mt10">Goodman's Burger</span>
@@ -590,14 +600,17 @@
 			
 			<!-- Item 3 -->
 			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 portfolio-box no-padding mix identity" data-my-order="4">
-				<div class="portfolio-image-holder"><img src="images/work/3.jpg" alt="3" class="img-responsive portfolio-image"></div>
+				<div class="portfolio-image-holder">
+					<!-- <img src="app/assets/images/work/3.jpg" alt="3" class="img-responsive portfolio-image"> -->
+					<%= image_tag("work/3.jpg", class: "img-responsive portfolio-image") %>
+				</div>
 				<span class="portfolio-badge badge">Print</span>
 				<span class="portfolio-hover">
 						<span>
 							<a href="https://dribbble.com/" target="_blank">
 								<span class="portfolio-links"><span class="ion-ios-arrow-right portfolio-links-icons"></span></span>
 							</a>
-							<a href="images/work/3.jpg" class="zoom" title="Paper Mockup">
+							<a href="<%= image_url('work/3.jpg') %>" class="zoom" title="Paper Mockup">
 								<span class="portfolio-links"><span class="ion-arrow-expand portfolio-links-icons"></span></span>
 							</a>
 							<span class="project-title no-margin-bottom mt10">Paper Mockup</span>
@@ -607,14 +620,17 @@
 			
 			<!-- Item 4 -->
 			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 portfolio-box no-padding mix graphics" data-my-order="5">
-				<div class="portfolio-image-holder"><img src="images/work/4.jpg" alt="4" class="img-responsive portfolio-image"></div>
+				<div class="portfolio-image-holder">
+					<!-- <img src="app/assets/images/work/4.jpg" alt="4" class="img-responsive portfolio-image"> -->
+					<%= image_tag("work/4.jpg", class: "img-responsive portfolio-image") %>
+				</div>
 				<span class="portfolio-badge badge">Graphics</span>
 				<span class="portfolio-hover">
 						<span>
 							<a href="https://dribbble.com/" target="_blank">
 								<span class="portfolio-links"><span class="ion-ios-arrow-right portfolio-links-icons"></span></span>
 							</a>
-							<a href="images/work/4.jpg" class="zoom" title="Simple Pleasure">
+							<a href="<%= image_url('work/4.jpg') %>" class="zoom" title="Simple Pleasure">
 								<span class="portfolio-links"><span class="ion-arrow-expand portfolio-links-icons"></span></span>
 							</a>
 							<span class="project-title no-margin-bottom mt10">Simple Pleasure</span>
@@ -624,14 +640,17 @@
 			
 			<!-- Item 5 -->
 			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 portfolio-box no-padding mix print identity" data-my-order="2">
-				<div class="portfolio-image-holder"><img src="images/work/5.jpg" alt="5" class="img-responsive portfolio-image"></div>
+				<div class="portfolio-image-holder">
+					<!-- <img src="app/assets/images/work/5.jpg" alt="5" class="img-responsive portfolio-image"> -->
+					<%= image_tag("work/5.jpg", class: "img-responsive portfolio-image") %>
+				</div>
 				<span class="portfolio-badge badge">Print + Identity</span>
 				<span class="portfolio-hover">
 						<span>
 							<a href="https://dribbble.com/" target="_blank">
 								<span class="portfolio-links"><span class="ion-ios-arrow-right portfolio-links-icons"></span></span>
 							</a>
-							<a href="images/work/5.jpg" class="zoom" title="Wine Bottles">
+							<a href="<%= image_url('work/5.jpg') %>" class="zoom" title="Wine Bottles">
 								<span class="portfolio-links"><span class="ion-arrow-expand portfolio-links-icons"></span></span>
 							</a>
 							<span class="project-title no-margin-bottom mt10">Wine Bottles</span>
@@ -641,14 +660,17 @@
 			
 			<!-- Item 6 -->
 			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 portfolio-box no-padding mix web" data-my-order="1">
-				<div class="portfolio-image-holder"><img src="images/work/6.jpg" alt="6" class="img-responsive portfolio-image"></div>
+				<div class="portfolio-image-holder">
+					<!-- <img src="app/assets/images/work/6.jpg" alt="6" class="img-responsive portfolio-image"> -->
+					<%= image_tag("work/6.jpg", class: "img-responsive portfolio-image") %>
+				</div>
 				<span class="portfolio-badge badge">Web</span>
 				<span class="portfolio-hover">
 						<span>
 							<a href="https://dribbble.com/" target="_blank">
 								<span class="portfolio-links"><span class="ion-ios-arrow-right portfolio-links-icons"></span></span>
 							</a>
-							<a href="images/work/6.jpg" class="zoom" title="Web UI">
+							<a href="<%= image_url('work/6.jpg') %>" class="zoom" title="Web UI">
 								<span class="portfolio-links"><span class="ion-arrow-expand portfolio-links-icons"></span></span>
 							</a>
 							<span class="project-title no-margin-bottom mt10">Web UI</span>
@@ -658,14 +680,17 @@
 			
 			<!-- Item 7 -->
 			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 portfolio-box no-padding mix graphics print" data-my-order="9">
-				<div class="portfolio-image-holder"><img src="images/work/7.jpg" alt="7" class="img-responsive portfolio-image"></div>
+				<div class="portfolio-image-holder">
+					<!-- <img src="app/assets/images/work/7.jpg" alt="7" class="img-responsive portfolio-image"> -->
+					<%= image_tag("work/7.jpg", class: "img-responsive portfolio-image") %>
+				</div>
 				<span class="portfolio-badge badge">Graphics + Print</span>
 				<span class="portfolio-hover">
 						<span>
 							<a href="https://dribbble.com/" target="_blank">
 								<span class="portfolio-links"><span class="ion-ios-arrow-right portfolio-links-icons"></span></span>
 							</a>
-							<a href="images/work/7.jpg" class="zoom" title="Hello World">
+							<a href="<%= image_url('work/7.jpg') %>" class="zoom" title="Hello World">
 								<span class="portfolio-links"><span class="ion-arrow-expand portfolio-links-icons"></span></span>
 							</a>
 							<span class="project-title no-margin-bottom mt10">Hello World</span>
@@ -675,14 +700,17 @@
 			
 			<!-- Item 8 -->
 			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 portfolio-box no-padding mix web" data-my-order="7">
-				<div class="portfolio-image-holder"><img src="images/work/8.jpg" alt="8" class="img-responsive portfolio-image"></div>
+				<div class="portfolio-image-holder">
+					<!-- <img src="app/assets/images/work/8.jpg" alt="8" class="img-responsive portfolio-image"> -->
+					<%= image_tag("work/8.jpg", class: "img-responsive portfolio-image") %>
+				</div>
 				<span class="portfolio-badge badge">Web</span>
 				<span class="portfolio-hover">
 						<span>
 							<a href="https://dribbble.com/" target="_blank">
 								<span class="portfolio-links"><span class="ion-ios-arrow-right portfolio-links-icons"></span></span>
 							</a>
-							<a href="images/work/8.jpg" class="zoom" title="We Create Mobile">
+							<a href="<%= image_url('work/8.jpg') %>" class="zoom" title="We Create Mobile">
 								<span class="portfolio-links"><span class="ion-arrow-expand portfolio-links-icons"></span></span>
 							</a>
 							<span class="project-title no-margin-bottom mt10">We Create Mobile</span>
@@ -692,14 +720,17 @@
 			
 			<!-- Item 9 -->
 			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 portfolio-box no-padding mix web" data-my-order="8">
-				<div class="portfolio-image-holder"><img src="images/work/9.jpg" alt="9" class="img-responsive portfolio-image"></div>
+				<div class="portfolio-image-holder">
+					<!-- <img src="app/assets/images/work/9.jpg" alt="9" class="img-responsive portfolio-image"> -->
+					<%= image_tag("work/9.jpg", class: "img-responsive portfolio-image") %>
+				</div>
 				<span class="portfolio-badge badge">Web</span>
 				<span class="portfolio-hover">
 						<span>
 							<a href="https://dribbble.com/" target="_blank">
 								<span class="portfolio-links"><span class="ion-ios-arrow-right portfolio-links-icons"></span></span>
 							</a>
-							<a href="images/work/9.jpg" class="zoom" title="Captain da Ship">
+							<a href="<%= image_url('work/1.jpg') %>" class="zoom" title="Captain da Ship">
 								<span class="portfolio-links"><span class="ion-arrow-expand portfolio-links-icons"></span></span>
 							</a>
 							<span class="project-title no-margin-bottom mt10">Captain da Ship</span>
@@ -726,7 +757,10 @@
 					
 					<!-- Item 1 -->
 					<li>
-						<div class="timeline-image scaleReveal"><img alt="" class="img-circle img-responsive" src="images/timeline-1.jpg"></div>
+						<div class="timeline-image scaleReveal">
+							<!-- <img alt="" class="img-circle img-responsive" src="app/assets/images/timeline-1.jpg"> -->
+							<%= image_tag("timeline-1.jpg", class: "img-circle img-responsive") %>
+						</div>
 						<div class="timeline-panel leftReveal">
 							<div class="timeline-heading">
 								<h5 class="heading-1 mb15">2015</h5>
@@ -740,7 +774,10 @@
 					
 					<!-- Item 2 -->
 					<li class="timeline-inverted">
-						<div class="timeline-image scaleReveal"><img alt="" class="img-circle img-responsive" src="images/timeline-2.jpg"></div>
+						<div class="timeline-image scaleReveal">
+							<!-- <img alt="" class="img-circle img-responsive" src="app/assets/images/timeline-2.jpg"> -->
+							<%= image_tag("timeline-2.jpg", class: "img-circle img-responsive") %>
+						</div>
 						<div class="timeline-panel rightReveal">
 							<div class="timeline-heading">
 								<h5 class="heading-1 mb15">April 2016</h5>
@@ -754,7 +791,10 @@
 					
 					<!-- Item 3 -->
 					<li>
-						<div class="timeline-image scaleReveal"><img alt="" class="img-circle img-responsive" src="images/timeline-3.jpg"></div>
+						<div class="timeline-image scaleReveal">
+							<!-- <img alt="" class="img-circle img-responsive" src="app/assets/images/timeline-3.jpg"> -->
+							<%= image_tag("timeline-3.jpg", class: "img-circle img-responsive") %>
+						</div>
 						<div class="timeline-panel leftReveal">
 							<div class="timeline-heading">
 								<h5 class="heading-1 mb15">May 2016</h5>
@@ -767,7 +807,10 @@
 					
 					<!-- Item 4 -->
 					<li class="timeline-inverted">
-						<div  class="timeline-image scaleReveal"><img alt="" class="img-circle img-responsive" src="images/timeline-4.jpg"></div>
+						<div  class="timeline-image scaleReveal">
+							<!-- <img alt="" class="img-circle img-responsive" src="app/assets/images/timeline-4.jpg"> -->
+							<%= image_tag("timeline-4.jpg", class: "img-circle img-responsive") %>
+						</div>
 						<div class="timeline-panel rightReveal">
 							<div class="timeline-heading">
 								<h5 class="heading-1 mb15">July 2016</h5>
@@ -811,7 +854,8 @@
 					                <a href="#"><span class="ion-social-googleplus-outline social-icons-light-hover"></span></a>
 								</span>
 							</span>
-						<img src="images/team-member-1.jpg" alt="1 Member" class="img-responsive img-circle team-member-img">
+						<!-- <img src="app/assets/images/team-member-1.jpg" alt="1 Member" class="img-responsive img-circle team-member-img"> -->
+						<%= image_tag("team-member-1.jpg", class: "img-responsive img-circle team-member-img", alt: '1 Member') %>
 					</div>
 				</div>
 			</div><!-- /.column -->
@@ -831,7 +875,8 @@
 					                <a href="#"><span class="ion-social-googleplus-outline social-icons-light-hover"></span></a>
 								</span>
 							</span>
-						<img src="images/team-member-2.jpg" alt="2 Member" class="img-responsive img-circle team-member-img">
+						<!-- <img src="app/assets/images/team-member-2.jpg" alt="2 Member" class="img-responsive img-circle team-member-img"> -->
+						<%= image_tag("team-member-2.jpg", class: "img-responsive img-circle team-member-img", alt: '2 Member') %>
 					</div>
 				</div>
 			</div><!-- /.column -->
@@ -851,7 +896,8 @@
 					                <a href="#"><span class="ion-social-googleplus-outline social-icons-light-hover"></span></a>
 								</span>
 							</span>
-						<img src="images/team-member-3.jpg" alt="3 Member" class="img-responsive img-circle team-member-img">
+						<!-- <img src="app/assets/images/team-member-3.jpg" alt="3 Member" class="img-responsive img-circle team-member-img"> -->
+						<%= image_tag("team-member-3.jpg", class: "img-responsive img-circle team-member-img", alt: '3 Member') %>
 					</div>
 				</div>
 			</div><!-- /.column -->
@@ -871,7 +917,8 @@
 					                <a href="#"><span class="ion-social-googleplus-outline social-icons-light-hover"></span></a>
 								</span>
 							</span>
-						<img src="images/team-member-4.jpg" alt="4 Member" class="img-responsive img-circle team-member-img">
+						<!-- <img src="app/assets/images/team-member-4.jpg" alt="4 Member" class="img-responsive img-circle team-member-img"> -->
+						<%= image_tag("team-member-4.jpg", class: "img-responsive img-circle team-member-img", alt: '4 Member') %>
 					</div>
 				</div>
 			</div><!-- /.column -->
@@ -905,10 +952,16 @@
 		<div class="row mb50">
 			<div class="col-lg-8 col-lg-offset-2 text-center">
 				<h2 class="heading-3 mt10 scaleReveal">Some of Our Clients</h2>
-				<img src="images/logos/coca.png" alt="Client 1" class="img-responsive pricing-clients mr15 topReveal">
-				<img src="images/logos/ebay.png" alt="Client 2" class="img-responsive pricing-clients mr15 bottomReveal">
-				<img src="images/logos/microsoft.png" alt="Client 3" class="img-responsive pricing-clients mr15 topReveal">
-				<img src="images/logos/pepsi.png" alt="Client 4" class="img-responsive pricing-clients bottomReveal">
+				<!-- ADDED ALT DATA TO IMAGES WITH EXPLICIT ALT TAGS DECLARED IN TEMPLATE, LEFT IT OUT OTHERWISE TO BE THE DEFAULT ALT TAG (image name w/ first letter capitalized)  -->
+
+				<!-- <img src="app/assets/images/logos/coca.png" alt="Client 1" class="img-responsive pricing-clients mr15 topReveal"> -->
+				<%= image_tag("logos/coca.png", class: "img-responsive pricing-clients mr15 topReveal", alt: 'Client 1') %>
+				<!-- <img src="app/assets/images/logos/ebay.png" alt="Client 2" class="img-responsive pricing-clients mr15 bottomReveal"> -->
+				<%= image_tag("logos/ebay.png", class: "img-responsive pricing-clients mr15 bottomReveal", alt: 'Client 2') %>
+				<!-- <img src="app/assets/images/logos/microsoft.png" alt="Client 3" class="img-responsive pricing-clients mr15 topReveal"> -->
+				<%= image_tag("logos/microsoft.png", class: "img-responsive pricing-clients mr15 topReveal", alt: 'Client 3') %>
+				<!-- <img src="app/assets/images/logos/pepsi.png" alt="Client 4" class="img-responsive pricing-clients bottomReveal"> -->
+				<%= image_tag("logos/pepsi.png", class: "img-responsive pricing-clients bottomReveall", alt: 'Client 4') %>
 			</div><!-- /.column -->
 		</div><!-- /.row -->
 		<div class="row">

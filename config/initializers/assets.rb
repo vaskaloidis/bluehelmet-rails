@@ -9,3 +9,31 @@ Rails.application.config.assets.version = (ENV["ASSETS_VERSION"] || "1.0")
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
+
+Rails.application.config.assets.precompile += %w( royal_preloader.css )
+Rails.application.config.assets.precompile += %w( parallax.min.js )
+Rails.application.config.assets.precompile += %w( royal_preloader.min.js )
+
+# Stylesheets
+Rails.application.config.assets.precompile += %w( bootstrap.css )
+Rails.application.config.assets.precompile += %w( ionicons.css )
+Rails.application.config.assets.precompile += %w( pe-icon-7-stroke.scss )
+Rails.application.config.assets.precompile += %w( magnific-popup.css )
+Rails.application.config.assets.precompile += %w( logoiconfont.css )
+Rails.application.config.assets.precompile += %w( style.css )
+Rails.application.config.assets.precompile += %w( style-switcher.css )
+Rails.application.config.assets.precompile += %w( colors/blue.css )
+Rails.application.config.assets.precompile += %w( base-light.css )
+
+# Footer Scripts
+Rails.application.config.assets.precompile += %w( bootstrap.min.js )
+Rails.application.config.assets.precompile += %w( particles.min.js )
+Rails.application.config.assets.precompile += %w( particlesRun.js )
+Rails.application.config.assets.precompile += %w( jquery.mixitup.js )
+Rails.application.config.assets.precompile += %w( form-validator.min.js )
+Rails.application.config.assets.precompile += %w( jquery.inview.min.js )
+Rails.application.config.assets.precompile += %w( jquery.countTo.js )
+Rails.application.config.assets.precompile += %w( scrollreveal.min.js )
+Rails.application.config.assets.precompile += %w( jquery.magnific-popup.min.js )
+Rails.application.config.assets.precompile += %w( style-switcher.js )
+Rails.application.config.assets.precompile += %w( main.js )
