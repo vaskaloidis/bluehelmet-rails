@@ -37,3 +37,5 @@ Rails.application.config.assets.precompile += %w( scrollreveal.min.js )
 Rails.application.config.assets.precompile += %w( jquery.magnific-popup.min.js )
 Rails.application.config.assets.precompile += %w( style-switcher.js )
 Rails.application.config.assets.precompile += %w( main.js )
+
+# TODO: Clean the un-used ones up
