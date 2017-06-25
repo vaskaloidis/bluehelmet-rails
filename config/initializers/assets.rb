@@ -21,7 +21,7 @@ Rails.application.config.assets.precompile += %w( pe-icon-7-stroke.scss )
 Rails.application.config.assets.precompile += %w( magnific-popup.css )
 Rails.application.config.assets.precompile += %w( logoiconfont.css )
 Rails.application.config.assets.precompile += %w( style.css )
-Rails.application.config.assets.precompile += %w( style-switcher.css )
+# Rails.application.config.assets.precompile += %w( style-switcher.css )
 Rails.application.config.assets.precompile += %w( colors/blue.css )
 Rails.application.config.assets.precompile += %w( base-light.css )
 
@@ -31,11 +31,13 @@ Rails.application.config.assets.precompile += %w( particles.min.js )
 Rails.application.config.assets.precompile += %w( particlesRun.js )
 Rails.application.config.assets.precompile += %w( jquery.mixitup.js )
 Rails.application.config.assets.precompile += %w( form-validator.min.js )
-Rails.application.config.assets.precompile += %w( jquery.inview.min.js )
-Rails.application.config.assets.precompile += %w( jquery.countTo.js )
+
 Rails.application.config.assets.precompile += %w( scrollreveal.min.js )
+Rails.application.config.assets.precompile += %w( jquery.inview.min.js )
+
+Rails.application.config.assets.precompile += %w( jquery.countTo.js )
 Rails.application.config.assets.precompile += %w( jquery.magnific-popup.min.js )
-Rails.application.config.assets.precompile += %w( style-switcher.js )
+# Rails.application.config.assets.precompile += %w( style-switcher.js )
 Rails.application.config.assets.precompile += %w( main.js )
 
 # TODO: Clean the un-used ones up
