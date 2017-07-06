@@ -32,5 +32,7 @@ Rails.application.configure do
     "Cache-Control" => "public, max-age=31557600",
   }
   config.action_mailer.default_url_options = { host: ENV.fetch("APPLICATION_HOST") }
+
+  config.action_view.raise_on_missing_translations = false
 end
 Rack::Timeout.timeout = (ENV["RACK_TIMEOUT"] || 10).to_i

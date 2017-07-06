@@ -1,4 +1,7 @@
 Rails.application.configure do
+
+
+
   config.cache_classes = false
   config.eager_load = false
   config.consider_all_requests_local = true
@@ -18,6 +21,7 @@ Rails.application.configure do
     Bullet.bullet_logger = true
     Bullet.rails_logger = true
   end
+
   config.action_mailer.delivery_method = :file
   config.action_mailer.perform_caching = false
   config.active_support.deprecation = :log
@@ -26,7 +30,8 @@ Rails.application.configure do
   config.assets.quiet = true
   config.assets.css_compressor = :sass
   config.assets.js_compressor = :uglifier
-  config.action_view.raise_on_missing_translations = true
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   config.action_mailer.default_url_options = { host: "localhost:3000" }
+
+  config.action_view.raise_on_missing_translations = false
 end

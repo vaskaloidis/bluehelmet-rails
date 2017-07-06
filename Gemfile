@@ -2,11 +2,16 @@ source "https://rubygems.org"
 
 ruby "2.3.1"
 
+gem 'activeadmin'
+gem "rails-erd"
+gem 'payola-payments'
+
 # Heroku
 # gem "honeybadger"
 gem 'rollbar' # Error Monitoring
 
-
+gem "clearance"
+gem "faker"
 # Suspenders Default Gems
 gem 'high_voltage'
 gem "autoprefixer-rails"

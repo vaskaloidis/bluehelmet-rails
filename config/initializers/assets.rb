@@ -21,8 +21,7 @@ Rails.application.config.assets.precompile += %w( pe-icon-7-stroke.scss )
 Rails.application.config.assets.precompile += %w( magnific-popup.css )
 Rails.application.config.assets.precompile += %w( logoiconfont.css )
 Rails.application.config.assets.precompile += %w( style.css )
-# Rails.application.config.assets.precompile += %w( style-switcher.css )
-Rails.application.config.assets.precompile += %w( colors/blue.css )
+Rails.application.config.assets.precompile += %w( blue.css )
 Rails.application.config.assets.precompile += %w( base-light.css )
 
 # Footer Scripts
