@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
-  ActiveAdmin.routes(self)
-  resources :contents
+  resources :user_infos
+  resources :demos
+
   resources :passwords, controller: "clearance/passwords", only: [:create, :new]
   resource :session, controller: "clearance/sessions", only: [:create]
-
   resources :users, controller: "clearance/users", only: [:create] do
     resource :password,
       controller: "clearance/passwords",
@@ -13,12 +13,11 @@ Rails.application.routes.draw do
 
 
   get "/sign_in" => "clearance/sessions#new", as: "sign_in"
-  delete "/sign_out" => "clearance/sessions#destroy", as: "sign_out"
   get "/hello" => "clearance/users#new", as: "sign_up"
   # get "/sign_up" => "clearance/users#new", as: "sign_up"
-  # match '/sign_out' => 'sessions#destroy', :via => :delete
+  delete '/sign_out' => 'clearance/sessions#destroy', as: 'sign_out'
 
-  get "/administrator" => "admin#index"
+  get "/admin" => "admin#index"
   get "/customer" => "customer#index"
 
   root 'main#home'
@@ -33,12 +32,8 @@ Rails.application.routes.draw do
     get "/customer" => "customer#index"
   end
 
-  # constraints Clearance::Constraints::SignedIn.new do
-  #   root to: "main#home", as: :signed_in_root
-  # end
-  #
-  # constraints Clearance::Constraints::SignedOut.new do
-  #   root to: "main#home"
-  # end
+  constraints Clearance::Constraints::SignedOut.new do
+    root to: "main#home"
+  end
 
 end

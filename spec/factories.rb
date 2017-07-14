@@ -1,4 +1,15 @@
 FactoryGirl.define do
+  factory :user_info do
+    name "MyString"
+    value "MyString"
+    User nil
+  end
+  factory :demo do
+    name "MyString"
+    description "MyText"
+    type ""
+    file "MyString"
+  end
   factory :user_content do
     user nil
     content nil

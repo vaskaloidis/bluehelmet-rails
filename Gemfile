@@ -2,18 +2,22 @@ source "https://rubygems.org"
 
 ruby "2.3.1"
 
-gem 'activeadmin'
+gem "activeadmin"
 gem "rails-erd"
-gem 'payola-payments'
+gem "payola-payments"
+gem "paper_trail"
+
+gem "carrierwave", "~> 1.0"
 
 # Heroku
-# gem "honeybadger"
+gem "honeybadger"
 gem 'rollbar' # Error Monitoring
 
 gem "clearance"
 gem "faker"
 # Suspenders Default Gems
-gem 'high_voltage'
+
+gem "high_voltage"
 gem "autoprefixer-rails"
 gem "delayed_job_active_record"
 gem "flutie"

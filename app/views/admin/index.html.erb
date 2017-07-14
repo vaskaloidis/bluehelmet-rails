@@ -1,23 +1,68 @@
 <h1>Admin</h1>
 
 
+
 <h2>Create New Customer</h2>
 <div id="clearance" class="sign-up">
-
-  <h2><%#= t(".title") %></h2>
-
-  <%= form_for @newUser do |form| %>
-      <%= render partial: '/users/form', object: form %>
-
-      <div class="submit-field">
-        <%= form.submit %>
-      </div>
-
+      <%= render partial: '/users/form', object: @newUser %>
       <div class="other-links">
-        <%= link_to t(".sign_in"), sign_up_url %>
+        <%= link_to t(".sign_up"), sign_up_url %>
       </div>
-  <% end %>
 </div>
 
 
 <h2>Customers</h2>
+<table class="table table-striped table-hover ">
+  <thead>
+  <tr>
+    <th>Email</th>
+    <th>Created-At</th>
+    <th>View Info</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @customers.each do |c| %>
+      <tr>
+        <td>1</td>
+        <td><%= c.email %></td>
+        <td><%= c.created_at %></td>
+        <td>
+          <button type="button" class="btn btn-default" data-toggle="modal" data-target="#user_modal_<%= c.id %>">View</button>
+        </td>
+      </tr>
+  <% end %>
+
+  <!--<tr class="info">-->
+  <!--<tr class="success">-->
+  <!--<tr class="danger">-->
+  <!--<tr class="warning">-->
+  <!--<tr class="active">-->
+  </tbody>
+</table>
+<% @customers.each do |c| %>
+  <div class="modal fade" id="user_modal_<%= c.id %>" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="ion-ios-close-empty"></span>
+          </button>
+          <span class="pe-7s-volume services-icon-2"></span>
+          <h4 class="service-title">Large Modal</h4>
+        </div>
+        <div class="modal-body">
+          <h5 class="heading-1 modal-heading mb20"><%= c.email %></h5>
+          <h5 class="heading-1 modal-heading mb20">Customer Info</h5>
+
+
+
+          <p>"Well, then," interrupted Bunger, "give him your left arm for bait to get the right. Do you know, gentlemen"—very gravely and mathematically bowing to each Captain in succession—"Do you know, gentlemen, that the digestive organs of the whale are so inscrutably constructed by Divine Providence, that it is quite impossible for him to completely digest even a man's arm? And he knows it too.</p>
+
+          <h5 class="heading-1 modal-heading mb20">Focusing</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed.</p>
+          <h5 class="heading-1 modal-heading mb20">Professionals</h5>
+          <p class="no-margin-bottom">"Good God!" cried the English Captain, to whom the question was put. "What's the matter? He was heading east, I think.—Is your Captain crazy?" whispering Fedallah. Phasellus pulvinar lacinia elit nec tristique.</p>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+<% end %>

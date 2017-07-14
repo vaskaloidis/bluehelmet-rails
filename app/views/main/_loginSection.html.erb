@@ -1,0 +1,60 @@
+<section id="login" class="background1">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1 text-center">
+        <span class="pe-7s-close heading-3-icon"></span>
+        <h2 class="heading-3">Customer Login</h2>
+        <% if signed_in? %>
+            <% if current_user.role == 'admin' %>
+                <a href="<%= root_url %>admin">
+            <% else %>
+                <a href="<%= root_url %>customer">
+            <% end %>
+            <h1>View <%= current_user.email %> Profile</h1>
+            </a>
+            <br>
+            Welcome <%= current_user.email %>
+            <%#= button_to 'Sign out', sign_out_path, method: :delete %>
+            <a href="<%= sign_out_path %>" data-method="delete" rel="nofollow">Logout of Blue Helmet</a>
+            <%#= button_to 'Sign out', sign_out_path, method: :delete %>
+        <% else %>
+            <a href="<%= root_url %>sign_in"><h2>Customer Login</h2></a>
+        <% end %>
+
+        <% if 1==2 %>
+            <% form_for :session, url: session_path do |form| %>
+                <div class="row mb10">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <div class="controls">
+                        <input class="form-control" data-error="This section is required."
+                               id="email" placeholder="Your Email Address"
+                               name="password"
+                               required="" type="text">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div><!-- /.column -->
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <div class="controls">
+                        <input class="email form-control" name="passwprd" data-error="Password." id="password" placeholder="Pasword" required="" type="password">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div><!-- /.column -->
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <div class="controls">
+                        <%= form.submit %>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div><!-- /.column -->
+                </div><!-- /.row -->
+            <% end %>
+        <% end %>
+      </div><!-- /.column -->
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+</section>
