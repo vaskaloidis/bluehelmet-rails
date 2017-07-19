@@ -2,22 +2,23 @@ source "https://rubygems.org"
 
 ruby "2.3.1"
 
-gem "activeadmin"
 gem "rails-erd"
 gem "payola-payments"
 gem "paper_trail"
 
 gem "carrierwave", "~> 1.0"
 
-# Heroku
-gem "honeybadger"
+gem 'yaml_db'
 gem 'rollbar' # Error Monitoring
 
 gem "clearance"
 gem "faker"
 # Suspenders Default Gems
 
-gem "high_voltage"
+gem 'nested_scaffold'
+gem 'bootstrap_form'
+
+# gem "high_voltage"
 gem "autoprefixer-rails"
 gem "delayed_job_active_record"
 gem "flutie"
@@ -36,6 +37,11 @@ gem "title"
 gem "uglifier"
 
 group :development do
+  # Dev-Tools
+  gem 'awesome_print'
+  # gem 'pry_rails'
+  gem 'better_errors'
+
   gem "listen"
   gem "spring"
   gem "spring-commands-rspec"
@@ -69,6 +75,9 @@ group :test do
 end
 
 group :staging, :production do
+  # Heroku
+  gem "honeybadger"
+
   gem "rack-timeout"
   gem "rails_stdout_logging"
 end

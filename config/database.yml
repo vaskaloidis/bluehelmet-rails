@@ -20,5 +20,7 @@ test:
 
 production:
   <<: *default
-  database: blue-helmet-prod
+  database: bluehelmet_production
+  username: bluehelmet
+  password: <%= ENV['bluehelmet_DATABASE_PASSWORD'] %>
 

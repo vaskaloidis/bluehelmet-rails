@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-cd /Users/vkaloidis/Code/Rails/bluehelmet/ \
-
-
 # rails g erb:scaffold Content name:string file:string \
 # description:text type:string
 #
@@ -11,7 +8,7 @@ cd /Users/vkaloidis/Code/Rails/bluehelmet/ \
 
 # Build the Models
 
-rails g scaffold ProjectType name:string
+rails g scaffold Language name:string html:string
 
 rails g scaffold TemplateType name:string
 
@@ -25,18 +22,15 @@ rails g scaffold Template name:string description:text \
  rails g scaffold UserNote note:text User:references sticky:boolean \
  author:integer
 
- rails g scaffold Project name:text User:references \
+ rails g scaffold Project name:text User:references phaseLength:integer \
  totalPhases:integer currentPhase:integer rate:decimal \
  documentationUrl:string kanbanUrl:string ciServerUrl:string \
- status:boolean githubUrl:string
+ status:boolean githubUrl:string stagingServer:string production:server:string \
+ Language:references
 
  rails g scaffold ProjectNote Project:reference note:text User:references sticky:boolean \
  author:integer
 
- rails g scaffold
+ rails g scaffold Payment Project:references User:references ammount:integer, method:string
 
- # Populate Categories / Types
- ProjectType.create(name: "website");
- ProjectType.create(name: "web-app");
- ProjectType.create(name: "desktop-app");
- ProjectType.create(name: "mobile-app");
+rails g scaffold Message User:references recipient:references message:text

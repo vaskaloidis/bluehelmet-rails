@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :contact_messages
   resources :user_infos
   resources :demos
 

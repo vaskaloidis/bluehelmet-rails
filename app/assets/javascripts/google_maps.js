@@ -38,8 +38,8 @@ function initMap() {
     var mapElement = document.getElementById('map');
     var map = new google.maps.Map(mapElement, mapOptions);
     var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(40.6700, -73.9400),
+        position: new google.maps.LatLng(27.950575, -82.45717760000002),
         map: map,
-        title: 'Our Office!'
+        title: 'Located in Tampa, Florida!'
     });
 }

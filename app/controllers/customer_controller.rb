@@ -3,8 +3,7 @@ class CustomerController < ApplicationController
   before_action :set_customer, only: [:index]
 
   def index
-
-
+    @customerInfo = @customer.customer_info
   end
 
   private
@@ -13,7 +12,6 @@ class CustomerController < ApplicationController
     if signed_in?
       @customer = current_user
     end
-
   end
 
 

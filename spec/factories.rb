@@ -1,4 +1,14 @@
 FactoryGirl.define do
+  factory :contact_message do
+    name "MyString"
+    subject "MyString"
+    phone "MyString"
+    email "MyString"
+    content "MyText"
+  end
+  factory :customer do
+    
+  end
   factory :user_info do
     name "MyString"
     value "MyString"

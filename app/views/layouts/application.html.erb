@@ -54,81 +54,16 @@
   <!--<link rel="alternate stylesheet" type="text/css" href="css/colors/orangelight.css" title="orangelight">-->
   <!--<link rel="alternate stylesheet" type="text/css" href="css/colors/pinkish.css" title="pinkish">-->
   <!--<link rel="alternate stylesheet" type="text/css" href="css/colors/seagul.css" title="seagul">-->
+  <title><%= title %></title>
+  <%= stylesheet_link_tag :application, media: "all" %>
+  <%= csrf_meta_tags %>
 </head>
-<title><%= title %></title>
-<%= stylesheet_link_tag :application, media: "all" %>
-<%= csrf_meta_tags %>
-</head>
+
 <body class="royal_preloader" data-spy="scroll" data-target=".navbar" data-offset="70">
 <div id="royal_preloader"></div>
 
 <!-- Begin Header -->
-<header>
-  <!-- Begin Navigation -->
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-      <div class="row">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand scroll-link" href="#home" data-id="home">
-            <!--<span class="icon-handle-streamline-vector logo">-->
-            <!--<h2>Blue Helmet</h2>-->
-            <%= image_tag("bluehelmet-logo.png", class: "logo1 topReveal", alt: 'Logo') %>
-            <!--</span>-->
-          </a>
-        </div>
-
-        <% if current_page?(root_url) %>
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-              <% if signed_in? -%>
-                  <% if current_user.role == "admin" %>
-                      <li><a href="<%= root_url %>admin">Admin</a></li>
-                  <% else %>
-                      <li><a href="<%= root_url %>customer">Profile</a></li>
-                  <% end %>
-              <% end -%>
-              <li><a href="#home" data-id="home" class="scroll-link">Home</a></li>
-              <li><a href="#ideology" data-id="ideology" class="scroll-link">Ideology</a></li>
-              <li><a href="#services" data-id="services" class="scroll-link">Services</a></li>
-              <li><a href="#about" data-id="about" class="scroll-link">About</a></li>
-              <li><a href="#products" data-id="products" class="scroll-link">Products</a></li>
-              <li><a href="#contact" data-id="contact" class="scroll-link">Contact</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-menu-down"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="components.html">Components</a></li>
-                  <li><a href="pricing-options.html">Pricing Options</a></li>
-                  <li><a href="team-options.html">Team Options</a></li>
-                  <li><a href="../index.html">Demos</a></li>
-                  <li>
-                    <a href="https://wrapbootstrap.com/theme/particles-personal-agency-template-WB05N7852" target="_blank">Purchase</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div><!-- /.navbar-collapse -->
-        <% else %>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav navbar-right">
-                <li><a href="<%= root_url %>">Home</a></li>
-              </ul>
-            </div><!-- /.navbar-collapse -->
-        <% end %>
-      </div>
-    </div><!-- /.container-fluid -->
-  </nav>
-  <!-- End Navigation -->
-</header>
-<!-- End Header -->
+<%= render 'layouts/header' %>
 
 
 <% if current_page?(root_url) %>
@@ -147,8 +82,8 @@
               <h1>Mobile</h1>
             </div>
             <hr>
-            <p>Blue Helmet can build your custom app, build and promote your brand, or what we do best - design you custom
-              software
+            <p>
+              Software development, media and marketing
             </p>
             <a href="#work" data-id="work" class="scroll-link btn btn-default btn-white btn-lg mt15">The work
               <span class="ion-android-arrow-down"></span></a>
@@ -160,7 +95,7 @@
 
 <% else %>
 
-    <section id="main_content" class="background1 section-padding">
+    <section id="main_content" class="background2 section-padding">
       <div class="container">
         <hr>
         <div class="row">
@@ -179,47 +114,39 @@
 
 <% if current_page?(root_url) %>
 
-
-
     <%= render 'main/loginSection' %>
 
     <%#= render 'main/ideology' %>
 
     <!-- Welcome + Services -->
     <section id="ideology">
-
-     <%= render 'main/hello' %>
-
-      <!-- Services Splitter -->
-      <div id="our-process-title" class="pt30 pb30">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12 text-center">
-              <h4 class="no-margin">Services</h4>
+          <%= render 'main/hello' %>
+          <!-- Services Splitter -->
+          <div id="our-process-title" class="pt30 pb30">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12 text-center">
+                  <h4 class="no-margin">Services</h4>
+                </div>
+              </div>
             </div>
-          </div><!-- /.row -->
-        </div><!-- /.container -->
-      </div><!-- /.div -->
-      <!-- End Our Process Title -->
-
-      <%= render 'main/services' %>
-
-      <%= render 'main/carousel' %>
-
+          </div>
+          <%= render 'main/services' %>
+          <%= render 'main/carousel' %>
     </section><!-- /.section -->
     <!-- End Intro -->
 
     <%= render 'main/products' %>
 
     <!-- Begin About -->
-    <%= render 'main/about' %>
+    <%#= render 'main/about' %>
 
     <!-- Begin Our Count -->
    <%= render 'main/numbers' %>
 
     <!-- SOFTWARE PRICING -->
     <%= render 'main/prices1' %>
-    <%= render 'main/prices2' %>
+    <%#= render 'main/prices2' %>
 
     <!-- Contact -->
     <%= render 'main/contact' %>

@@ -1,3 +1,3 @@
-class UserInfo < ApplicationRecord
+class UserInfo < User
   belongs_to :User
 end
