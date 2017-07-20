@@ -8,6 +8,7 @@ require "action_mailer/railtie"
 require "action_view/railtie"
 require "action_cable/engine"
 require "sprockets/railtie"
+require 'dotenv/load'
 Bundler.require(*Rails.groups)
 module Bluehelmet
   class Application < Rails::Application

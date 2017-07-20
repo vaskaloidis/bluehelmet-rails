@@ -1,5 +1,8 @@
+require 'dotenv/load'
+
 # require Rails.root.join("config/smtp")
 Rails.application.configure do
+
   if ENV.fetch("HEROKU_APP_NAME", "").include?("staging-pr-")
     ENV["APPLICATION_HOST"] = ENV["HEROKU_APP_NAME"] + ".herokuapp.com"
   end
@@ -15,9 +18,9 @@ Rails.application.configure do
   config.action_controller.asset_host = ENV.fetch("ASSET_HOST", ENV.fetch("APPLICATION_HOST"))
   config.log_level = :debug
   config.log_tags = [ :request_id ]
-  config.action_mailer.perform_caching = false
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = SMTP_SETTINGS
+  # config.action_mailer.perform_caching = false
+  # config.action_mailer.delivery_method = :smtp
+  # # config.action_mailer.smtp_settings = SMTP_SETTINGS
   config.i18n.fallbacks = true
   config.active_support.deprecation = :notify
   config.log_formatter = ::Logger::Formatter.new
@@ -31,8 +34,8 @@ Rails.application.configure do
   config.public_file_server.headers = {
     "Cache-Control" => "public, max-age=31557600",
   }
-  config.action_mailer.default_url_options = { host: ENV.fetch("APPLICATION_HOST") }
+  # config.action_mailer.default_url_options = { host: ENV.fetch("APPLICATION_HOST") }
 
   config.action_view.raise_on_missing_translations = false
 end
-Rack::Timeout.timeout = (ENV["RACK_TIMEOUT"] || 10).to_i
+# Rack::Timeout.timeout = (ENV["RACK_TIMEOUT"] || 10).to_i
