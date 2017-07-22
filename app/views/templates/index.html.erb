@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Templates</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Purchaseurl</th>
+      <th>Demourl</th>
+      <th>Templatetype</th>
+      <th>Templatecategory</th>
+      <th>Price</th>
+      <th>Tags</th>
+      <th>Compatiblebrowsers</th>
+      <th>Bootstrapversions</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @templates.each do |template| %>
+      <tr>
+        <td><%= template.name %></td>
+        <td><%= template.description %></td>
+        <td><%= template.purchaseUrl %></td>
+        <td><%= template.demoUrl %></td>
+        <td><%= template.TemplateType %></td>
+        <td><%= template.TemplateCategory %></td>
+        <td><%= template.price %></td>
+        <td><%= template.tags %></td>
+        <td><%= template.compatibleBrowsers %></td>
+        <td><%= template.bootstrapVersions %></td>
+        <td><%= link_to 'Show', template %></td>
+        <td><%= link_to 'Edit', edit_template_path(template) %></td>
+        <td><%= link_to 'Destroy', template, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Template', new_template_path %>

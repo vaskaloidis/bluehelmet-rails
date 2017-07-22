@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Template Types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @template_types.each do |template_type| %>
+      <tr>
+        <td><%= template_type.name %></td>
+        <td><%= link_to 'Show', template_type %></td>
+        <td><%= link_to 'Edit', edit_template_type_path(template_type) %></td>
+        <td><%= link_to 'Destroy', template_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Template Type', new_template_type_path %>

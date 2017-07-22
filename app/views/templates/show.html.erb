@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @template.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @template.description %>
+</p>
+
+<p>
+  <strong>Purchaseurl:</strong>
+  <%= @template.purchaseUrl %>
+</p>
+
+<p>
+  <strong>Demourl:</strong>
+  <%= @template.demoUrl %>
+</p>
+
+<p>
+  <strong>Templatetype:</strong>
+  <%= @template.TemplateType %>
+</p>
+
+<p>
+  <strong>Templatecategory:</strong>
+  <%= @template.TemplateCategory %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @template.price %>
+</p>
+
+<p>
+  <strong>Tags:</strong>
+  <%= @template.tags %>
+</p>
+
+<p>
+  <strong>Compatiblebrowsers:</strong>
+  <%= @template.compatibleBrowsers %>
+</p>
+
+<p>
+  <strong>Bootstrapversions:</strong>
+  <%= @template.bootstrapVersions %>
+</p>
+
+<%= link_to 'Edit', edit_template_path(@template) %> |
+<%= link_to 'Back', templates_path %>

@@ -1,4 +1,26 @@
 FactoryGirl.define do
+  factory :template do
+    name "MyString"
+    description "MyText"
+    purchaseUrl "MyString"
+    demoUrl "MyString"
+    TemplateType nil
+    TemplateCategory nil
+    price "9.99"
+    tags "MyText"
+    compatibleBrowsers "MyText"
+    bootstrapVersions "MyText"
+  end
+  factory :template_category do
+    name "MyString"
+  end
+  factory :template_type do
+    name "MyString"
+  end
+  factory :language do
+    name "MyString"
+    html "MyString"
+  end
   factory :contact_message do
     name "MyString"
     subject "MyString"

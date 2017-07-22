@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>RailsDependency</ID>
+  <OriginalElement>Bit</OriginalElement>
+  <nodes>
+    <node x="0.0" y="0.0">User</node>
+    <node x="520.0" y="21.551282051282072">Chunk</node>
+    <node x="1253.0" y="38.134615384615394">ApplicationRecord</node>
+    <node x="291.0" y="0.0">Stack</node>
+    <node x="749.0" y="76.82051282051282">Bit</node>
+    <node x="1001.0" y="48.07051282051283">Language</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Bit" target="Chunk">
+      <point x="-86.0" y="-51.5" />
+      <point x="74.5" y="23.0" />
+    </edge>
+    <edge source="User" target="Stack">
+      <point x="105.5" y="-0.0" />
+      <point x="-74.5" y="-0.0" />
+    </edge>
+    <edge source="Language" target="Chunk">
+      <point x="-86.0" y="-18.25" />
+      <point x="749.0" y="66.32051282051283" />
+      <point x="74.5" y="-23.0" />
+    </edge>
+    <edge source="Stack" target="Chunk">
+      <point x="74.5" y="39.33333333333334" />
+      <point x="-74.5" y="46.0" />
+    </edge>
+    <edge source="Chunk" target="Bit">
+      <point x="74.5" y="69.0" />
+      <point x="-86.0" y="51.5" />
+    </edge>
+    <edge source="Chunk" target="ApplicationRecord">
+      <point x="74.5" y="-69.0" />
+      <point x="749.0" y="23.500000000000007" />
+      <point x="1173.0" y="23.500000000000007" />
+      <point x="-72.0" y="-3.625" />
+    </edge>
+    <edge source="Chunk" target="Stack">
+      <point x="-74.5" y="-46.0" />
+      <point x="74.5" y="7.105427357601002E-15" />
+    </edge>
+    <edge source="Bit" target="Language">
+      <point x="86.0" y="-51.5" />
+      <point x="-86.0" y="18.25" />
+    </edge>
+    <edge source="Stack" target="ApplicationRecord">
+      <point x="74.5" y="-39.333333333333336" />
+      <point x="520.0" y="7.814102564102569" />
+      <point x="1173.0" y="7.814102564102569" />
+      <point x="-72.0" y="-10.875" />
+    </edge>
+    <edge source="Bit" target="ApplicationRecord">
+      <point x="86.0" y="51.5" />
+      <point x="1173.0" y="231.32051282051285" />
+      <point x="-72.0" y="10.875" />
+    </edge>
+    <edge source="Language" target="ApplicationRecord">
+      <point x="86.0" y="-0.0" />
+      <point x="-72.0" y="3.625" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.8073394495412844" x="698.5" y="141.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Association fields</Category>
+    <Category>Migration fields</Category>
+  </Categories>
+</Diagram>
+

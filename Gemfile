@@ -1,18 +1,14 @@
 source "https://rubygems.org"
-
-ruby "2.3.1"
+ruby "2.4.0"
+# BLUE-HELMET
 
 gem "dotenv-rails"
-
 gem "rails-erd"
 gem "payola-payments"
 gem "paper_trail"
-
 gem "carrierwave", "~> 1.0"
-
 gem 'yaml_db'
 gem 'rollbar' # Error Monitoring
-
 gem "clearance"
 gem "faker"
 # Suspenders Default Gems
@@ -39,11 +35,8 @@ gem "title"
 gem "uglifier"
 
 group :development do
-  # Dev-Tools
   gem 'awesome_print'
-  # gem 'pry_rails'
   gem 'better_errors'
-
   gem "listen"
   gem "spring"
   gem "spring-commands-rspec"
@@ -55,8 +48,9 @@ group :development, :test do
   gem "bullet"
   gem "bundler-audit", ">= 0.5.0", require: false
   gem "factory_girl_rails"
-  gem "pry-byebug"
+  gem "pry"
   gem "pry-rails"
+  gem "pry-byebug"
   gem "rspec-rails", "~> 3.5.0.beta4"
 end
 
@@ -78,7 +72,6 @@ end
 group :staging, :production do
   # Heroku
   gem "honeybadger"
-
   gem "rack-timeout"
   gem "rails_stdout_logging"
 end

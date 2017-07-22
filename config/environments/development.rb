@@ -1,6 +1,6 @@
 Rails.application.configure do
 
-
+  BetterErrors.editor='x-mine://open?file=%{file}&line=%{line}' if defined?(BetterErrors)
 
   config.cache_classes = false
   config.eager_load = false

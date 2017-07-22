@@ -24,6 +24,8 @@
 
   <!-- Parallax File -->
   <%= javascript_include_tag "parallax.min.js" %>
+  <%#= javascript_include_tag "drift.js" %>
+
 
   <!-- Royal Preloader -->
   <%= javascript_include_tag "royal_preloader.min.js" %>
@@ -56,6 +58,8 @@
   <!--<link rel="alternate stylesheet" type="text/css" href="css/colors/seagul.css" title="seagul">-->
   <title><%= title %></title>
   <%= stylesheet_link_tag :application, media: "all" %>
+
+
   <%= csrf_meta_tags %>
 </head>
 
@@ -146,7 +150,15 @@
 
     <!-- SOFTWARE PRICING -->
     <%= render 'main/prices1' %>
-    <%#= render 'main/prices2' %>
+
+    <!-- LOGIN -->
+    <%= render 'main/timeline' %>
+
+    <!-- LOGIN -->
+    <%= render 'main/work' %>
+
+    <!-- LOGIN -->
+    <%= render 'main/loginSection' %>
 
     <!-- Contact -->
     <%= render 'main/contact' %>
@@ -160,14 +172,16 @@
 <footer class="footer-padding">
   <div class="container">
     <div class="row">
-      <div class="col-sm-8 col-sm-offset-2 text-center">
-      </div>
-    </div>
-    <div class="row">
       <div class="col-sm-8 text-small text-center">
         <hr>
           <div class="row">
-              <a href="<%= root_url %>sign_out" type="button" class="btn btn-primary btn-up-footer btn-lg">Logout</a>
+            <% if signed_in? %>
+                <%= current_user.email %>
+                <%= button_to "Sign out", sign_out_path, method: :delete %>
+            <% else %>
+                <%= link_to "Sign in", sign_in_path %>
+            <% end %>
+              <!--<a href="<%= sign_out_path %>" type="button" class="btn btn-primary btn-up-footer btn-lg">Logout</a>-->
               <button type="button" class="btn btn-primary btn-up-footer btn-lg scroll-top">Up</button>
           </div>
           <div class="row">

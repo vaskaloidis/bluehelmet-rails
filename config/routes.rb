@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :templates
+  resources :template_categories
+  resources :template_types
+  resources :languages
   resources :contact_messages
   resources :user_infos
   resources :demos
