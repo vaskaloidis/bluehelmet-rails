@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @work.title %>
+</p>
+
+<p>
+  <strong>Worktype:</strong>
+  <%= @work.WorkType %>
+</p>
+
+<p>
+  <strong>Workcategory:</strong>
+  <%= @work.WorkCategory %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @work.content %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @work.url %>
+</p>
+
+<%= link_to 'Edit', edit_work_path(@work) %> |
+<%= link_to 'Back', works_path %>

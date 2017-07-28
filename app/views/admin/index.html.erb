@@ -1,7 +1,4 @@
 <h1>Admin</h1>
-
-
-
 <!--<h2>Create New Customer</h2>-->
 <!--<div id="clearance" class="sign-up">-->
       <!--<%#= render partial: '/users/form', object: @newUser %>-->
@@ -9,29 +6,29 @@
         <!--<#%= link_to t(".sign_up"), sign_up_url %>-->
       <!--</div>-->
 <!--</div>-->
-
-
 <h2>Customers</h2>
 <table class="table table-striped table-hover ">
   <thead>
   <tr>
     <th>Email</th>
     <th>Created-At</th>
-    <th>View Info</th>
+    <th>View</th>
+    <th>Edit</th>
   </tr>
   </thead>
   <tbody>
   <% @customers.each do |c| %>
       <tr>
-        <td>1</td>
         <td><%= c.email %></td>
         <td><%= c.created_at %></td>
         <td>
           <button type="button" class="btn btn-default" data-toggle="modal" data-target="#user_modal_<%= c.id %>">View</button>
         </td>
+        <td>
+          <%= link_to "Edit", admin_view_customer_path(c), :class => "btn btn-primary" %>
+        </td>
       </tr>
   <% end %>
-
   <!--<tr class="info">-->
   <!--<tr class="success">-->
   <!--<tr class="danger">-->
@@ -50,19 +47,62 @@
           <h4 class="service-title">Large Modal</h4>
         </div>
         <div class="modal-body">
-          <h5 class="heading-1 modal-heading mb20"><%= c.email %></h5>
           <h5 class="heading-1 modal-heading mb20">Customer Info</h5>
-
-
-
-          <p>"Well, then," interrupted Bunger, "give him your left arm for bait to get the right. Do you know, gentlemen"—very gravely and mathematically bowing to each Captain in succession—"Do you know, gentlemen, that the digestive organs of the whale are so inscrutably constructed by Divine Providence, that it is quite impossible for him to completely digest even a man's arm? And he knows it too.</p>
-
-          <h5 class="heading-1 modal-heading mb20">Focusing</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed.</p>
-          <h5 class="heading-1 modal-heading mb20">Professionals</h5>
-          <p class="no-margin-bottom">"Good God!" cried the English Captain, to whom the question was put. "What's the matter? He was heading east, I think.—Is your Captain crazy?" whispering Fedallah. Phasellus pulvinar lacinia elit nec tristique.</p>
+          <p>
+            <%= c.role %><br>
+            <%= c.firstName %>, <%= c.lastName %><br>
+            <%= c.company %><br>
+            <%= c.phone %><br>
+          </p>
+          <!--<h5 class="heading-1 modal-heading mb20"></h5>-->
+          <!--<p></p>-->
+          <!--<h5 class="heading-1 modal-heading mb20">Professionals</h5>-->
+          <!--<p class="no-margin-bottom">"</p>-->
         </div>
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
 <% end %>
+<hr>
+
+<h2>Templates</h2>
+
+
+
+<hr>
+<p id="notice"><%= notice %></p>
+<hr>
+
+<h1>Contact Messages</h1>
+
+<table class="table table-striped table-hover ">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Subject</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Content</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @contact_messages.each do |contact_message| %>
+      <tr>
+        <td><%= contact_message.name %></td>
+        <td><%= contact_message.subject %></td>
+        <td><%= contact_message.phone %></td>
+        <td><%= contact_message.email %></td>
+        <td><%= contact_message.content %></td>
+        <td><%= link_to 'Show', contact_message %></td>
+        <td><%= link_to 'Edit', edit_contact_message_path(contact_message) %></td>
+        <td><%= link_to 'Destroy', contact_message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Contact Message', new_contact_message_path %>

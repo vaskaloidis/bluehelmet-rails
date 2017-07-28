@@ -19,12 +19,15 @@
 # TemplateCategory:references price:decimal tags:text \
 # compatibleBrowsers:text bootstrapVersions:text
 
+pry-models
 
+rails db:migrate
 
  rails g scaffold UserNote note:text User:references sticky:boolean \
  author:integer
 
- rails g scaffold Project name:text User:references phaseLength:integer \
+ rails g scaffold Project \
+ name:text admin_id:references customer_id:references phaseLength:integer \
  totalPhases:integer currentPhase:integer rate:decimal \
  documentationUrl:string kanbanUrl:string ciServerUrl:string \
  status:boolean githubUrl:string stagingServer:string production:server:string \

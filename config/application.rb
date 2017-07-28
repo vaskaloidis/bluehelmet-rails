@@ -8,8 +8,11 @@ require "action_mailer/railtie"
 require "action_view/railtie"
 require "action_cable/engine"
 require "sprockets/railtie"
-require 'dotenv/load'
+require "dotenv/load"
 Bundler.require(*Rails.groups)
+
+Dotenv::Railtie.load
+
 module Bluehelmet
   class Application < Rails::Application
     config.assets.quiet = true

@@ -1,4 +1,5 @@
 class MainController < ApplicationController
+
   def home
     @contact_message = ContactMessage.new
   end

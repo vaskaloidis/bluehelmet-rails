@@ -6,7 +6,6 @@ development: &default
   username: postgres
   password: postgres
 
-
 development:
   <<: *default
   database: blue-helmet-dev

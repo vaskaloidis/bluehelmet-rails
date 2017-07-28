@@ -1,20 +1,26 @@
 source "https://rubygems.org"
-ruby "2.4.0"
+ruby "2.3.1"
+gem "rails", "~> 5.1", ">= 5.1.2"
 # BLUE-HELMET
 
-gem "dotenv-rails"
-gem "rails-erd"
-gem "payola-payments"
+gem "dotenv-rails", :groups => [:development, :test], :require => "dotenv/rails-now"
+# gem "dotenv-rails", require: "dotenv/rails-now"
+
+
+# Stripe Payments
+# gem "payola-payments"
+# gem "payola-payments", git: "https://github.com/alekseenko/payola"
+
 gem "paper_trail"
-gem "carrierwave", "~> 1.0"
-gem 'yaml_db'
-gem 'rollbar' # Error Monitoring
+gem "yaml_db"
+gem "rollbar" # Error Monitoring
 gem "clearance"
 gem "faker"
 # Suspenders Default Gems
 
-gem 'nested_scaffold'
-gem 'bootstrap_form'
+gem "nested_scaffold"
+gem "bootstrap_form"
+gem 'formtastic', '~> 3.0'
 
 # gem "high_voltage"
 gem "autoprefixer-rails"
@@ -25,7 +31,6 @@ gem "normalize-rails", "~> 3.0.0"
 gem "pg"
 gem "puma"
 gem "rack-canonical-host"
-gem "rails", "~> 5.0.0"
 gem "recipient_interceptor"
 gem "sass-rails", "~> 5.0"
 gem "simple_form"
@@ -35,22 +40,23 @@ gem "title"
 gem "uglifier"
 
 group :development do
-  gem 'awesome_print'
-  gem 'better_errors'
+  gem "awesome_print"
+  gem "pry"
+  gem "pry-rails"
+  gem "pry-byebug"
+  gem "better_errors"
+  gem "binding_of_caller"
   gem "listen"
   gem "spring"
   gem "spring-commands-rspec"
   gem "web-console"
+  gem "rails-erd"
 end
 
 group :development, :test do
-  gem "awesome_print"
   gem "bullet"
   gem "bundler-audit", ">= 0.5.0", require: false
   gem "factory_girl_rails"
-  gem "pry"
-  gem "pry-rails"
-  gem "pry-byebug"
   gem "rspec-rails", "~> 3.5.0.beta4"
 end
 

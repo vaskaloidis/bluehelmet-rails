@@ -1,4 +1,21 @@
 FactoryGirl.define do
+  factory :demo_user do
+    
+  end
+  factory :work do
+    title "MyString"
+    WorkType nil
+    WorkCategory nil
+    content "MyText"
+    url "MyString"
+  end
+  factory :work_type do
+    name "MyString"
+  end
+  factory :work_category do
+    name "MyString"
+    htmlId "MyString"
+  end
   factory :template do
     name "MyString"
     description "MyText"

@@ -6,7 +6,7 @@ function initMap() {
         scaleControl: false,
         scrollwheel: false,
         disableDoubleClickZoom: true,
-        center: new google.maps.LatLng(40.6700, -73.9400), // New York
+        center: new google.maps.LatLng(950575, -82.45717760000002), // New York
         styles: [{
             "featureType": "landscape",
             "stylers": [{"saturation": -100}, {"lightness": 65}, {"visibility": "on"}]

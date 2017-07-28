@@ -1,4 +1,5 @@
 class ContactMessagesController < ApplicationController
+  include Clearance::Controller
   before_action :set_contact_message, only: [:show, :edit, :update, :destroy]
 
   # GET /contact_messages

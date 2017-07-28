@@ -5,8 +5,6 @@ class CreateTemplates < ActiveRecord::Migration[5.0]
       t.text :description
       t.string :purchaseUrl
       t.string :demoUrl
-      t.references :TemplateType, foreign_key: true
-      t.references :TemplateCategory, foreign_key: true
       t.decimal :price
       t.text :tags
       t.text :compatibleBrowsers

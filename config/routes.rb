@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :works
+  resources :work_types
+  resources :work_categories
   resources :templates
   resources :template_categories
   resources :template_types
@@ -16,6 +19,7 @@ Rails.application.routes.draw do
       only: [:create, :edit, :update]
   end
 
+  get"/admin/custom/:id" => "admin#view_customer", as: "admin_view_customer"
 
   get "/sign_in" => "clearance/sessions#new", as: "sign_in"
   get "/hello" => "clearance/users#new", as: "sign_up"
@@ -26,7 +30,6 @@ Rails.application.routes.draw do
   get "/customer" => "customer#index"
 
   root 'main#home'
-
 
   constraints Clearance::Constraints::SignedIn.new { |user| user.role == "admin" } do
     get "/admin " => "admin/dashboards#show"

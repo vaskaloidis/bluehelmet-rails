@@ -1,4 +1,4 @@
 class Template < ApplicationRecord
-  has_one :TemplateType
-  has_one :TemplateCategory
+  belongs_to :TemplateType
+  belongs_to :TemplateCategory
 end
