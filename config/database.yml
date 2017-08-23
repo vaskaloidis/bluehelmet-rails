@@ -26,4 +26,3 @@ production:
   database: bluehelmet_production
   username: bluehelmet
   password: <%= ENV['BLUEHELMET_DATABASE_PASSWORD'] %>
-
