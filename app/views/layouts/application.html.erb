@@ -97,26 +97,27 @@
 		</section>
 <% end %>
 
-
-<% if current_page?(root_url) && login %>
+<% if current_page?(root_url) %>
 		
-		<section id="login" class="background2">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-10 col-md-offset-1 text-center">
-						<% if signed_in? %>
-								<% if current_user.role == 'admin' %>
-										<a href="<%= root_url %>admin"><h1>Admin Panel</h1></a>
-								<% else %>
-										<a href="<%= root_url %>customer"><h1>View <%= current_user.email %> Profile</h1></a>
-										Welcome <%= current_user.email %>
-										<a href="<%= sign_out_path %>" data-method="delete" rel="nofollow">Logout of Blue Helmet</a>
+		<% if login %>
+				<section id="login" class="background2">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-10 col-md-offset-1 text-center">
+								<% if signed_in? %>
+										<% if current_user.role == 'admin' %>
+												<a href="<%= root_url %>admin"><h1>Admin Panel</h1></a>
+										<% else %>
+												<a href="<%= root_url %>customer"><h1>View <%= current_user.email %> Profile</h1></a>
+												Welcome <%= current_user.email %>
+												<a href="<%= sign_out_path %>" data-method="delete" rel="nofollow">Logout of Blue Helmet</a>
+										<% end %>
 								<% end %>
-						<% end %>
+							</div>
+						</div>
 					</div>
-				</div>
-			</div>
-		</section>
+				</section>
+		<% end %>
 		
 		<%#= render 'main/ideology' %>
 		
@@ -128,7 +129,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-12 text-center">
-							<h4 class="no-margin">Services</h4>
+							<h4 class="no-margin">Ideology</h4>
 						</div>
 					</div>
 				</div>
@@ -156,7 +157,7 @@
 		<%#= render 'main/work' %>
 		
 		<!-- LOGIN -->
-		<%= render 'main/loginSection' %>
+		<%#= render 'main/loginSection' %>
 		
 		<%= render 'main/contact' %>
 		
@@ -174,7 +175,7 @@
 <footer class="footer-padding">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-8 text-small text-center">
+			<div class="text-small text-center">
 				<hr>
 				<div class="row">
 					<% if signed_in? %>

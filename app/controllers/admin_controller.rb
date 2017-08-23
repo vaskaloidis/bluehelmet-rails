@@ -1,7 +1,7 @@
 class AdminController < ApplicationController
   before_action :set_customer, only: [:view_customer]
 
-  def view_admin
+  def index
 
     @customers = User.where(role: 'customer')
 
