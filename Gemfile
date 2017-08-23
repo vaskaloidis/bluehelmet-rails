@@ -3,7 +3,6 @@ ruby "2.3.4"
 gem "rails", "~> 5.1", ">= 5.1.2"
 # BLUE-HELMET
 
-gem "dotenv-rails", :groups => [:development, :test], :require => "dotenv/rails-now"
 # gem "dotenv-rails", require: "dotenv/rails-now"
 
 
@@ -40,6 +39,7 @@ gem "title"
 gem "uglifier"
 
 group :development do
+  gem "dotenv-rails", :require => "dotenv/rails-now"
   gem "awesome_print"
   gem "pry"
   gem "pry-rails"
