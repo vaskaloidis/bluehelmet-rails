@@ -1,7 +1,4 @@
 FactoryGirl.define do
-  factory :demo_user do
-    
-  end
 
   factory :work do
     title "MyString"
