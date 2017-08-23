@@ -39,7 +39,7 @@ gem "title"
 gem "uglifier"
 
 group :development do
-  gem "dotenv-rails", :require => "dotenv/rails-now"
+  gem "dotenv-rails"
   gem "awesome_print"
   gem "pry"
   gem "pry-rails"
