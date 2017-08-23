@@ -136,7 +136,6 @@ GEM
     mime-types-data (3.2016.0521)
     mini_portile2 (2.2.0)
     minitest (5.10.3)
-    multi_json (1.12.1)
     nested_scaffold (1.0.0)
     nio4r (2.1.0)
     nokogiri (1.8.0)
@@ -202,8 +201,6 @@ GEM
     recipient_interceptor (0.1.2)
       mail
     request_store (1.3.2)
-    rollbar (2.15.0)
-      multi_json
     rspec-core (3.5.4)
       rspec-support (~> 3.5.0)
     rspec-expectations (3.5.0)
@@ -331,7 +328,6 @@ DEPENDENCIES
   rails-erd
   rails_stdout_logging
   recipient_interceptor
-  rollbar
   rspec-rails (~> 3.5.0.beta4)
   sass-rails (~> 5.0)
   shoulda-matchers
@@ -349,7 +345,7 @@ DEPENDENCIES
   yaml_db
 
 RUBY VERSION
-   ruby 2.3.1p112
+   ruby 2.3.4p301
 
 BUNDLED WITH
    1.15.3

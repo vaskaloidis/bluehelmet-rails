@@ -11,8 +11,10 @@ Rails.application.routes.draw do
   resources :user_infos
   resources :demos
 
-  resources :passwords, controller: "clearance/passwords", only: [:create, :new]
-  resource :session, controller: "clearance/sessions", only: [:create]
+  resources :passwords, controller: "clearance/passwords",
+            only: [:create, :new]
+  resource :session, controller: "session",
+           only: [:create]
   resources :users, controller: "clearance/users", only: [:create] do
     resource :password,
       controller: "clearance/passwords",
@@ -21,13 +23,13 @@ Rails.application.routes.draw do
 
   get"/admin/custom/:id" => "admin#view_customer", as: "admin_view_customer"
 
-  get "/sign_in" => "clearance/sessions#new", as: "sign_in"
-  get "/hello" => "clearance/users#new", as: "sign_up"
+  get "/login" => "clearance/sessions#new", as: "sign_in"
+  get "/welcome" => "clearance/users#new", as: "sign_up"
   # get "/sign_up" => "clearance/users#new", as: "sign_up"
-  delete '/sign_out' => 'clearance/sessions#destroy', as: 'sign_out'
+  get '/logout' => 'clearance/sessions#destroy', as: 'sign_out'
 
-  get "/admin" => "admin#index"
-  get "/customer" => "customer#index"
+  get "/admin" => "admin#index", as: 'admin_section'
+  get "/customer" => "customer#index", as: 'customer_section'
 
   root 'main#home'
 

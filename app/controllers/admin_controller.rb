@@ -1,16 +1,17 @@
 class AdminController < ApplicationController
   before_action :set_customer, only: [:view_customer]
 
+  def view_admin
 
-  def index
-
-    @customers = User.where(role: 'customer');
+    @customers = User.where(role: 'customer')
 
     @newUser = User.new
 
     @contact_messages = ContactMessage.all
 
     @new_demo = Demo.new
+
+    # @projects = Project.all
   end
 
 
@@ -21,6 +22,10 @@ class AdminController < ApplicationController
   private
 
   def set_customer
-    @customer = User.find( params[:id])
+    if current_user.role != 'admin'
+      @customer = User.find( current_user.id)
+    else
+      @customer = User.first(0)
+    end
   end
 end

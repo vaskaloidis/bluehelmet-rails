@@ -1,22 +1,36 @@
-<%= form_for :session, url: session_path do |form| %>
-  <div class="text-field">
-    <%= form.label :email %>
-    <%= form.text_field :email, type: 'email' %>
-  </div>
-
-  <div class="password-field">
-    <%= form.label :password %>
-    <%= form.password_field :password %>
-  </div>
-
-  <div class="submit-field">
-    <%= form.submit %>
-  </div>
-
-  <div class="other-links">
-    <% if Clearance.configuration.allow_sign_up? %>
-      <%= link_to t(".sign_up"), sign_up_path %>
-    <% end %>
-    <%= link_to t(".forgot_password"), new_password_path %>
-  </div>
+<%= simple_form_for :session, url: session_path do |form| %>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="row">
+					<div class="form-group">
+						<div class="controls">
+							<%= form.input :email, wrapper_html: { class: 'email', id: 'email' } %>
+							<div class="help-block with-errors"></div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group">
+						<div class="controls">
+							<%= form.input :password, wrapper_html: { class: 'password', id: 'emapasswordil' } %>
+							<div class="help-block with-errors"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row mt15">
+				<div class="col-sm-6">
+					<div id="msgSubmit" class="h4 hidden mt10 no-margin-bottom"></div>
+				</div><!-- /.column -->
+				<div class="col-sm-6 text-right">
+						<%= form.button :submit, "Login", class: "btn btn-default btn-lg" %>
+					
+					<%#= form.button :submit, wrapper_html: { class: 'btn btn-default btn-lg', id: 'submit' } %>
+					<% if Clearance.configuration.allow_sign_up? %>
+							<%= link_to t(".sign_up"), sign_up_path, html_options = { class: 'btn btn-default btn-lg' } %>
+					<% end %>
+					<%= link_to t(".forgot_password"), new_password_path, html_options = { class: 'btn btn-default btn-lg' } %>
+				</div>
+			</div><!-- /.column -->
+		</div><!-- /.row -->
 <% end %>

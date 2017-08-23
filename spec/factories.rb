@@ -2,6 +2,7 @@ FactoryGirl.define do
   factory :demo_user do
     
   end
+
   factory :work do
     title "MyString"
     WorkType nil
@@ -63,11 +64,5 @@ FactoryGirl.define do
     user nil
     content nil
     sticky false
-  end
-  factory :content do
-    name "MyString"
-    file "MyString"
-    description "MyText"
-    type ""
   end
 end

@@ -1,10 +1,14 @@
 development: &default
-  database: blue-helmet
+  database: blue-helmet-dev
   adapter: postgresql
   pool: 10
   host: localhost
   username: postgres
   password: postgres
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
@@ -21,5 +25,5 @@ production:
   <<: *default
   database: bluehelmet_production
   username: bluehelmet
-  password: <%= ENV['bluehelmet_DATABASE_PASSWORD'] %>
+  password: <%= ENV['BLUEHELMET_DATABASE_PASSWORD'] %>
 

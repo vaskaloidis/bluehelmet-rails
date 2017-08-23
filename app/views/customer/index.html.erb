@@ -1,4 +1,4 @@
-<h2>Welcome @customer.email</h2>
+<h2>Welcome <%= @customer.firstName %></h2>
 
 <div class="container">
   <div class="row">
@@ -9,16 +9,17 @@
             <img src="http://placehold.it/380x500" alt="" class="img-rounded img-responsive" />
           </div>
           <div class="col-sm-6 col-md-8">
-            <h4>
-              Bhaumik Patel</h4>
-            <small><cite title="San Francisco, USA">San Francisco, USA <i class="glyphicon glyphicon-map-marker">
+            <h4><%=@customer.firstName %>, <%=@customer.lastName %></h4>
+            <small><cite title="City, USA">City, USA <i class="glyphicon glyphicon-map-marker">
             </i></cite></small>
             <p>
-              <i class="glyphicon glyphicon-envelope"></i>email@example.com
+              <i class="glyphicon glyphicon-envelope"></i><%= @customer.email %>
               <br />
-              <i class="glyphicon glyphicon-globe"></i><a href="http://www.jquery2dotnet.com">www.jquery2dotnet.com</a>
+              <i class="glyphicon glyphicon-globe"></i><%= @customer.company %>
               <br />
-              <i class="glyphicon glyphicon-gift"></i>June 02, 1988</p>
+	            <i class="glyphicon glyphicon-gift"></i><%= @customer.phone %>
+	            <br>
+	            <i class="glyphicon glyphicon-gift"></i>Added:<%= @customer.created_at %></p>
             <!-- Split button -->
             <div class="btn-group">
               <button type="button" class="btn btn-primary">

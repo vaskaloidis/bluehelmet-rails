@@ -3,14 +3,15 @@ class CustomerController < ApplicationController
   before_action :set_customer, only: [:index]
 
   def index
-    @customerInfo = @customer.customer_info
+    @customerInfo = current_user.user_infos
+    @customer = current_user
   end
 
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_customer
     if signed_in?
-      @customer = current_user
+      # technically we need nothing here
     end
   end
 

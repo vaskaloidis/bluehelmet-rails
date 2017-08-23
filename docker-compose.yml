@@ -1,0 +1,29 @@
+version: '2'
+
+services:
+  postgres:
+    image: 'postgres:9.6-alpine'
+    environment:
+      POSTGRES_USER: 'root'
+      POSTGRES_PASSWORD: 'yourpassword'
+    ports:
+      - '5432:5432'
+    volumes:
+      - 'postgres:/var/lib/postgresql/data'
+
+
+  website:
+    depends_on:
+      - 'postgres'
+      - 'redis'
+    build: .
+    ports:
+      - '3002:3002'
+    volumes:
+      - '.:/app'
+    env_file:
+      - '.env'
+
+
+volumes:
+  postgres:

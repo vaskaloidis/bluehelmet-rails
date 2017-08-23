@@ -1,5 +1,5 @@
 <% if signed_in? %>
-    <section id="login" class="background2">
+    <section id="login" class="background1">
       <div class="container">
         <div class="row">
           <div class="col-md-10 col-md-offset-1 text-center">
@@ -14,4 +14,14 @@
         </div>
       </div>
     </section>
+<% else %>
+		<section id="login" class="background2">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1 text-center">
+						<%= render partial: '/sessions/form' %>
+					</div>
+				</div>
+			</div>
+		</section>
 <% end %>

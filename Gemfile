@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby "2.3.1"
+ruby "2.3.4"
 gem "rails", "~> 5.1", ">= 5.1.2"
 # BLUE-HELMET
 
@@ -13,7 +13,7 @@ gem "dotenv-rails", :groups => [:development, :test], :require => "dotenv/rails-
 
 gem "paper_trail"
 gem "yaml_db"
-gem "rollbar" # Error Monitoring
+# gem "rollbar" # Error Monitoring
 gem "clearance"
 gem "faker"
 # Suspenders Default Gems
