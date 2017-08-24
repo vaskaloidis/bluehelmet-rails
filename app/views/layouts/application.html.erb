@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8"/>
-	<meta name="ROBOTS" content="NOODP"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 	<%#
     Configure default and controller-, and view-specific titles in
@@ -10,10 +9,10 @@
     https://github.com/calebthompson/title#usage
 	%>
 	<meta charset="utf-8"/>
-	<meta name="author" content="Denis Samardjiev"/>
+	<meta name="author" content="Vasilis Kaloidis"/>
 	<meta name="description" content="Blue Helmet Software">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<title>Blue Helmet Software</title>
+	<title>Blue Helmet Software Company</title>
 	
 	<!-- Devicon Icons -->
 	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
@@ -49,7 +48,7 @@
 	<%= stylesheet_link_tag "logoiconfont.css" %>
 	<%= stylesheet_link_tag "style.css" %>
 	<%= stylesheet_link_tag "blue" %>
-	<%= stylesheet_link_tag "base-light.css" %>
+	<%#= stylesheet_link_tag "base-light.css" %>
 	
 	<% login = false %>
 	
@@ -79,31 +78,37 @@
 		<%= render 'main/jumbotron' %>
 <% else %>
 		<% if current_page?(root_url) %>
-				<section id="main_content" class="background2 section-padding">
+				<section id="main_content" class="background1 section-padding">
 		<% else %>
-				<section id="main_content" class="background2 section-padding-top">
+				<section id="main_content" class="background1 section-padding-top">
 		<% end %>
-		<div class="container">
-			<div class="row">
-				<div class="container">
-					<% flash.each do |key, value| %>
-							<div class="alert alert-<%= key %>"><%= value %></div>
-					<% end %>
-					
-					<%= yield %>
-					<%#= render 'layouts/footer' %>
-					<%#= debug(params) if Rails.env.development? %>
-				</div>
-			</div><!-- /.row -->
-			</hr>
-		</div><!-- /.container -->
-		</section>
+			<div class="container">
+				<div class="row">
+					<div class="container">
+						<% flash.each do |key, value| %>
+								<div class="alert alert-<%= key %>"><%= value %></div>
+						<% end %>
+						
+						<%= yield %>
+						<%#= render 'layouts/footer' %>
+						<%#= debug(params) if Rails.env.development? %>
+					</div>
+				</div><!-- /.row -->
+				</hr>
+			</div><!-- /.container -->
+		
+		<!-- Fixes IDE Issues-->
+		<% if current_page?(root_url) %>
+				</section>>
+		<% else %>
+				</section>>
+		<% end %>
 <% end %>
 
 <% if current_page?(root_url) %>
 		
 		<% if login %>
-				<section id="login" class="background2">
+				<section id="login" class="background1">
 					<div class="container">
 						<div class="row">
 							<div class="col-md-10 col-md-offset-1 text-center">
@@ -125,7 +130,7 @@
 		<%#= render 'main/ideology' %>
 		
 		<!-- Welcome + Services -->
-		<section id="ideology">
+		<section class="background1" id="ideology">
 			<%= render 'main/hello' %>
 			<!-- Services Splitter -->
 			<div id="our-process-title" class="pt30 pb30">
@@ -172,10 +177,9 @@
 <% if current_page?(root_url) && login %>
 		<%= render 'main/loginSection' %>
 <% end %>
-</body>
 
 <!-- Begin Footer -->
-<footer class="footer-padding">
+<footer class="footer-padding background2">
 	<div class="container">
 		<div class="row no-margin-bottom">
 			<div class="text-center no-margin-bottom">
@@ -224,4 +228,7 @@
 <%= javascript_include_tag "jquery.magnific-popup.min.js" %>
 <%= javascript_include_tag "scrollreveal.min.js" %>
 <%= javascript_include_tag "main.js" %>
+
+</body>
+
 </html>

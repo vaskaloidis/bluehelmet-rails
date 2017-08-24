@@ -1,3 +1,86 @@
+
+
+// BLUE HELMET SOFTWARE
+
+
+
+// CLIENT - GRID
+
+.clients-grid,
+.testimonials-grid {
+  list-style: none;
+  overflow: hidden;
+}
+
+.clients-grid li,
+.testimonials-grid li {
+  float: left;
+  position: relative;
+  width: 20%;
+  padding: 20px 0;
+  -webkit-backface-visibility: hidden;
+}
+
+.clients-grid.grid-2 li {
+  width: 50%;
+  padding: 25px 0;
+}
+
+.clients-grid.grid-3 li { width: 33.33%; }
+
+.clients-grid.grid-4 li { width: 25%; }
+
+.clients-grid.grid-6 li { width: 16.66%; }
+
+.clients-grid li a { opacity: 0.6; }
+
+body:not(.device-touch) .clients-grid li a {
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.clients-grid li a:hover { opacity: 1; }
+
+.clients-grid li a,
+.clients-grid li img {
+  display: block;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.clients-grid li a img { width: 100%; }
+
+.clients-grid li:before,
+.clients-grid li:after,
+.testimonials-grid li:before,
+.testimonials-grid li:after {
+  content: '';
+  position: absolute;
+}
+
+.clients-grid li:before,
+.testimonials-grid li:before {
+  height: 100%;
+  top: 0;
+  left: -1px;
+  border-left: 1px dashed #DDD;
+}
+
+.clients-grid li:after,
+.testimonials-grid li:after {
+  width: 100%;
+  height: 0;
+  top: auto;
+  left: 0;
+  bottom: -1px;
+  border-bottom: 1px dashed #DDD;
+}
+
+
+
+
 /*
 Name:Particles - Personal + Agency Template
 Version:1.0
@@ -903,10 +986,14 @@ ul.social-buttons li a:active {
 	margin-bottom: 0;
 }
 
+.navbar-logo {
+  background: #222222 none repeat scroll 0% 0% !important;
+}
+
 .navbar-default {
 	font-family: "Montserrat",sans-serif;
 	font-size: 12px;
-	background: rgb(47, 47, 47) none repeat scroll 0% 0%;
+    background: rgb(47, 47, 47) none repeat scroll 0% 0%;
 	text-transform: uppercase;
 }
 
