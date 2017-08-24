@@ -15,6 +15,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<title>Blue Helmet Software</title>
 	
+	<!-- Devicon Icons -->
+	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+	
 	<!-- Royal Preloader CSS -->
 	<%= stylesheet_link_tag "royal_preloader" %>
 	
@@ -174,21 +177,23 @@
 <!-- Begin Footer -->
 <footer class="footer-padding">
 	<div class="container">
+		<div class="row no-margin-bottom">
+			<div class="text-center no-margin-bottom">
+				<button type="button" class="btn btn-primary btn-up-footer btn-lg scroll-top">Up</button>
+			</div>
+		</div>
 		<div class="row">
 			<div class="text-small text-center">
 				<hr>
 				<div class="row">
+					<p class="no-margin">&copy; Blue Helmet Software Company</p>
 					<% if signed_in? %>
 							<%= current_user.email %>
 							<%= button_to "Sign out", sign_out_path, method: :delete %>
 					<% else %>
 							<%= link_to "Sign in", sign_in_path %>
 					<% end %>
-					<!--<a href="<%= sign_out_path %>" type="button" class="btn btn-primary btn-up-footer btn-lg">Logout</a>-->
-					<button type="button" class="btn btn-primary btn-up-footer btn-lg scroll-top">Up</button>
-				</div>
-				<div class="row">
-					<p class="no-margin">&copy; Blue Helmet Software</p>
+					<!--<a href="<%#= sign_out_path %>" type="button" class="btn btn-primary btn-up-footer btn-lg">Logout</a>-->
 				</div>
 			</div><!-- /.column -->
 		</div><!-- /.row -->
